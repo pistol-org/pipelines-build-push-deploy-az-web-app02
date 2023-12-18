@@ -10,6 +10,8 @@ resources:
 
 variables:
   # Container registry service connection established during pipeline creation
+  azureSubscription: "pk-dev"
+  appName: 'pk-sample-docker-web-app'
   dockerRegistryServiceConnection: '49b3016e-6e4f-4a39-b45d-83fcc59dbf22'
   imageRepository: 'pistolorgpipelinesbuildpushdeployazwebapp'
   containerRegistry: 'pkdevregistry.azurecr.io'
