@@ -42,8 +42,7 @@ stages:
 
     ## Add the below snippet at the end of your pipeline
     - task: AzureWebAppContainer@1
-      displayName: 'Azure Web App on Container Deploy'
       inputs:
-        azureSubscription: $(azureSubscription)
-        appName: $(appName)
+        azureSubscription: 'pk-dev(0409446c-0e3b-464f-bf8a-6bd47e0922ad)'
+        appName: 'pk-sample-docker-web-app'
         containers: $(containerRegistry)/$(imageRepository):$(tag)
