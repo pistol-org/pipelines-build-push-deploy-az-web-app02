@@ -11,7 +11,7 @@ resources:
 variables:
   # Container registry service connection established during pipeline creation
   azureSubscription: "pk-dev"
-  appName: 'pk-sample-docker-web-app'
+  appName: 'pk-sample-docker-web-app-02'
   dockerRegistryServiceConnection: '49b3016e-6e4f-4a39-b45d-83fcc59dbf22'
   imageRepository: 'pistolorgpipelinesbuildpushdeployazwebapp'
   containerRegistry: 'pkdevregistry.azurecr.io'
@@ -44,5 +44,5 @@ stages:
     - task: AzureWebAppContainer@1
       inputs:
         azureSubscription: 'pk-dev(0409446c-0e3b-464f-bf8a-6bd47e0922ad)'
-        appName: 'pk-sample-docker-web-app'
+        appName: 'pk-sample-docker-web-app-02'
         containers: $(containerRegistry)/$(imageRepository):$(tag)
